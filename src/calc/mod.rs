@@ -1,6 +1,7 @@
-use nom::{Err, error::{Error}};
+pub mod ast;
+pub mod parser;
 
-use crate::parser;
+use nom::{Err, error::{Error}};
 
 pub fn expr_eval(s: &str) -> Result<i32, Err<Error<&str>>>
 {
